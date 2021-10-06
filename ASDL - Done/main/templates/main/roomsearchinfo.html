@@ -1,0 +1,24 @@
+<!-- Patient admitted room info  -->
+
+
+{% extends "main/subhome2.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container my-3">
+	{% for x in rs %}
+	<div class="no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
+	<p>	
+		<strong>Patient ID   :  </strong>{{x.pid}}<br>
+		<strong>Room No   :  </strong>{{x.room_no}}<br>
+		<strong>Date Of Admission   :  </strong>{{x.date_of_admn}}<br>
+		<strong>Date of Discharge   :  </strong>{{x.date_of_dis}}<br>
+	</p>	
+	</div>
+	{% endfor %}
+</div>
+
+
+{% endblock %}

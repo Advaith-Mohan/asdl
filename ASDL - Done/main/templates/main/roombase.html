@@ -1,0 +1,20 @@
+<!-- Search Rooms to book  -->
+
+
+{% extends "main/subhome2.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+      
+    <div>
+      <form method="get" action="/room" class="d-flex">
+        Enter Room Type(S/D):
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q" id="q">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+{% endblock %}

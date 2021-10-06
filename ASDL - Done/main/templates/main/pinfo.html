@@ -1,0 +1,28 @@
+<!-- Patient Search Results  -->
+
+{% extends "main/subhome2.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<div class="container my-3">
+	{% for x in pat %}
+	<div class="no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
+	<p>	
+		<strong>Patient ID   :  </strong>{{x.pid}}<br>
+		<strong>Name   :  </strong>{{x.patient_name}}<br>
+		<strong>Age   :  </strong>{{x.age}}<br>
+		<strong>Gender   :  </strong>{{x.gender}}<br>
+		<strong>Weight   :  </strong>{{x.weight}}<br>
+		<strong>Address   :  </strong>{{x.address}}<br>
+		<strong>Phone   :  </strong>{{x.phone_no}}<br>
+		<strong>Disease   :  </strong>{{x.disease}}<br>
+
+	</p>	
+	</div>
+	{% endfor %}
+</div>
+
+
+{% endblock %}

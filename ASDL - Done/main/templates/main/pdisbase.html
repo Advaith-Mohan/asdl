@@ -1,0 +1,19 @@
+<!-- Searching for patient for Discharge  -->
+
+
+{% extends "main/subhome2.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+      
+    <div>
+      <form method="get" action="/DischargeInfo" class="d-flex">
+        Enter Patient Name:<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="dis" id="dis">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+
+{% endblock %}

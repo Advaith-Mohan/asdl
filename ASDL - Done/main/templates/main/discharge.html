@@ -1,0 +1,18 @@
+<!-- room book confirm  -->
+
+
+{% extends "main/subhome2.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+	<form method="POST" class="form-group">
+			{% csrf_token %}
+			{{ form|crispy }}
+			<button class="btn btn-success">DONE</button>
+			<br><br>
+			<small> select home or any other options to cancel </small>
+	</form>
+
+{% endblock %}

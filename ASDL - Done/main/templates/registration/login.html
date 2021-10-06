@@ -1,0 +1,17 @@
+{% extends "main/subhome2.html" %}
+
+{% block title %}
+    Login Here
+{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <form method="post" class="form-group">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button type="submit" class="btn btn-success"><strong>LOGIN</strong></button>
+        <br><br><br>
+        Don't have an account? Create one<a href="/register"><strong> here</strong></a>
+    </form>
+{% endblock %}

@@ -1,0 +1,44 @@
+<!-- Room Booking Results  -->
+
+
+{% extends "main/subhome2.html" %}
+
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+
+	<table class="table table-bordered">
+		  <thead>
+		    <tr>
+		      <th scope="col">Room No</th>
+		      <th scope="col">Room Type</th>
+		      <th scope="col">Status</th>
+		    </tr>
+		  </thead>
+	
+				{% for x in rm %}
+		
+		  <tbody>
+		    <tr class="table">
+		      <td>{{x.room_no}}</td>
+		      <td>{{x.room_type}}</td>
+		      <td>
+		      	{% if x.available == True %}
+		      	Available
+		      	<a href= "{% url 'main:RoomFilled' %}?x_id={{x.pk}}">		      	
+		      		<button class="btn btn-outline-success" type="submit">BOOK</button>
+		        </a>
+		      	{% else %}
+		      	Filled
+		      	{% endif %}
+		      </td>
+		    </tr>
+		    
+
+		    	{% endfor %}
+
+		   </tbody>
+	</table>
+
+{% endblock %}
